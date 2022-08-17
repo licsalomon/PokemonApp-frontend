@@ -1,0 +1,58 @@
+<!-- Search -->
+<div class="app">
+  <search
+    (emmitFilter)="getFilter($event)"
+  ></search>
+  <div class="pokegallery">
+    <ng-template
+      ngFor
+      let-pokemon
+      [ngForOf]="
+        getAllPokemons
+          | paginate: { itemsPerPage: itemsPerPage, currentPage: page }
+      "
+    >
+      <a
+        [routerLink]="['/details', pokemon.status.id]"
+        class="pokemon"
+        *ngIf="pokemon.status"
+      >
+        <div class="card">
+          <div>
+            <h2>
+              {{ pokemon.name | titlecase }}
+            </h2>
+            <h4>Id: {{ pokemon.status.id }}</h4>
+          </div>
+          <div>
+            <img
+              [src]="pokemon.status.sprites.other.dream_world.front_default"
+              [alt]="pokemon.name"
+            />
+          </div>
+          <hr/>
+          <ul>
+            <li *ngFor="let value of pokemon.status.types">
+              {{ value.type.name | titlecase }}
+            </li>
+          </ul>
+        </div>
+      </a>
+    </ng-template>
+  </div>
+
+  <img
+    src="assets/error.png"
+    alt="Deu erro na mostragem do pokemon"
+    width="100%"
+    *ngIf="apiError"
+  />
+  <pagination-controls
+*ngIf="paginationSelect"
+  previosLabel="Back"
+  nextLabel="Next"
+  (pageChange)="page = $event"
+></pagination-controls>
+  <footer (emmitSearch)="getSearch($event)"></footer>
+</div>
+

@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+  <div>
+    <input
+      type="text"
+      id="initial"
+      formControlName="initial"
+      placeholder="Initial number of Pokemon..."
+    />
+    <input
+      type="text"
+      formControlName="final"
+      id="final"
+      placeholder="Final Pokemon..."
+    />
+  </div>
+  <div>
+    <label for="qty">Quantity the items per page</label>
+    <select id="qty" name="qty" formControlName="quantity">
+      <option *ngFor="let pages of qty" [value]="pages">{{ pages }}</option>
+    </select>
+    <label for="pagination">Like pagination or scroll?</label>
+    <select id="pagination" name="pagination" formControlName="pagination">
+      <option *ngFor="let pages of page" [value]="pages">{{ pages }}</option>
+    </select>
+  </div>
+<div>
+  <button class="btn" (click)="setFilter()">Set filter</button>
+</div>
+  <div [hidden]="!numberInputsError">
+    <small>{{ error }}</small>
+  </div>
+</form>
+

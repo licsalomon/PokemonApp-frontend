@@ -1,0 +1,65 @@
+<main>
+  <ng-template [ngIf]="isLoading">
+    <div class="pokemon__names">
+      <h1 class="slideInLeft">{{ pkn[0].name | titlecase }}</h1>
+    </div>
+    <hr />
+    <div class="pokemon__status">
+      <div class="image">
+        <img
+          [src]="pkn[0].sprites.other.dream_world.front_default"
+          [alt]="pkn[0].name"
+        />
+      </div>
+
+      <div class="details">
+        <h3>Details</h3>
+        <ul>
+          <li>
+            Weight:
+            {{ pkn[0].weight }}
+          </li>
+          <li>
+            Height:
+            {{ pkn[0].height }}
+          </li>
+        </ul>
+        </div>
+        <hr />
+        <div class="abilities">
+        <h3>Abilities</h3>
+
+        <ol>
+          <li *ngFor="let value of pkn[0].abilities">
+            {{ value.ability.name }}
+          </li>
+        </ol>
+      </div>
+      <div class="status">
+        <h3>Status</h3>
+
+        <ol>
+          <li *ngFor="let value of pkn[0].stats">
+            Name: {{ value.stat.name }}
+            <ul>
+              <li>
+                Quantity:
+                <strong>
+                  {{ value.base_stat }}
+                </strong>
+              </li>
+            </ul>
+            <hr>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div class="button">
+      <button>
+        <a [routerLink]="['']"> Back </a>
+      </button>
+    </div>
+  </ng-template>
+
+  <img alt="Error showing pokemon image" width="100%" *ngIf="apiError" />
+</main>

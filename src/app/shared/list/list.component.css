@@ -1,0 +1,49 @@
+.app {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.pokegallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+  margin: 10px;
+}
+.card {
+  object-fit: contain;
+  width: 15rem;
+  height: 20rem;
+  background-color: rgb(255, 255, 166);
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 6px 10px 5px 0px rgba(199, 197, 199, 0.75);
+
+}
+img {
+  float: right;
+  max-width: 40%;
+  max-height: 40%;
+  width: auto;
+  object-fit: contain;
+  padding-right: 5px;
+  padding-left: 2px;
+}
+a {
+  color: rgb(69, 69, 69);
+  text-decoration: none;
+}
+li {
+float: left;
+list-style:circle;
+list-style-position:inside;
+}
+ 
+h2 {
+  padding-top: 10px;
+}
+hr {
+  size:2px;
+  color: black;
+
+}

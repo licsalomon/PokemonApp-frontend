@@ -1,0 +1,60 @@
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding: 15px;
+  margin-top: 0px;
+  background-color: rgb(255, 93, 93);
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: rem-calc(10);
+  color: white;
+}
+input {
+  display:inline-flex;
+  /* float: left; */
+  width: 100%;
+  background: none;
+  /* border: none; */
+  margin: 10px;
+  /* padding: 5px; */
+  /* border: grey; */
+  border-width: 2px;
+  font-size: rem-calc(18);
+  border-color: white;
+  box-shadow: 2px 3px 3px 0px rgba(95, 95, 95, 0.75);
+  color: white;
+}
+select {
+  display: flex;
+  box-shadow: 2px 3px 3px 0px rgba(95, 95, 95, 0.75);
+   /* float: right; */
+  /* clear: both;  */
+  width: 100%;
+  margin: 10px;
+  /* padding: 5px; */
+}
+label {
+  font-size: 12px;
+  color: white;
+}
+button {
+  background-color: red;
+  border: none;
+  box-shadow: 2px 3px 3px 0px rgba(95, 95, 95, 0.75);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+::placeholder {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+small {
+  color: black;
+  font-weight: bold;
+  background-color: yellow;
+
+}

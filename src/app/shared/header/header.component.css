@@ -1,0 +1,13 @@
+.main {
+  background-color: rgb(255, 255, 143);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 15px;
+  margin-bottom: 0px;
+  width: 95%;
+  color: rgb(69, 69, 69);
+}
+
+img {
+  max-width: 10%;
+  max-height: auto;
+}
