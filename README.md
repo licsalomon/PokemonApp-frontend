@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
+Este projeto fue criado com Angular, TypeScript, JavaScript, Html e Css.
+Ele conta con uma lista de Pokemons que traz da Api...
+O usuário pode filtrar los datos de varias formas:
+Tem primeiro uma barra para filtrar por id: ele traz um range com validações de número menor e maior. Dentro de esta mesma barra pode filtrar a quantidade de items por pagina e se prefere com paginação ou scroll.
+No footer tem outra barra que filtra por nome, com identificação de cada carater.
+Também pode clicar num item e entrar nos detalhes dele e voltar para o home.
+
+
+
+
+
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
